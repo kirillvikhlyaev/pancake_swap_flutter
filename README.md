@@ -26,3 +26,32 @@ Created with:
 <p align="center">
 <img src="assets/screenshots/currency_rate.png" alt="demo" width="40%"/>
 </p>
+
+## Getting price method
+
+```dart
+Future<void> getPrice(String token1Address, String token2Address) async {
+    String abi =
+        await rootBundle.loadString('assets/abi/pancake_swap_abi.json');
+    DeployedContract contract = await _getContract(abi);        // Getting contract
+
+    final getThePriceContract = contract.function('getAmountsOut');
+    final gettingThePrice = await ethereumClient.call(          // Call function from .abi
+      contract: contract,
+      function: getThePriceContract,
+      params: <dynamic>[
+        BigInt.from(1),                                         // Amount first token
+        [
+          EthereumAddress.fromHex(token1Address),               // First token address
+          EthereumAddress.fromHex(token2Address)                // Second token address
+        ],
+      ],
+    );
+    dateOfReceipt = DateFormat.Hms().format(DateTime.now());    // Date of function call  
+    result = gettingThePrice.first[1].toString();
+
+    fetchingTimer = Timer.periodic(const Duration(seconds: 25), // Setup timer for get updated data
+        (_) => getPrice(token1Address, token2Address));
+    notifyListeners();
+  }
+```
