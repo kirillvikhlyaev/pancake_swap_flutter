@@ -1,16 +1,22 @@
-# pancake_swap_flutter
+# PancakeSwapFlutter
 
-A new Flutter project.
+Simple Flutter project for check exchange rate of the selected currency pair
 
-## Getting Started
+Created with:
 
-This project is a starting point for a Flutter application.
+- [web3dart](https://pub.dev/packages/web3dart)
+- [PancakeSwap](https://pancakeswap.finance/swap)
 
-A few resources to get you started if this is your first Flutter project:
+## Demo:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Main page - choosing a currency pair
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![img](assets/screenshots/pair_choice.png)
+
+2. Page for choosing currency
+
+![img](assets/screenshots/currency_choice.png)
+
+3. Page for viewing the exchange rate with an update of information every 25 seconds
+
+![img](assets/screenshots/currency_rate.png)
