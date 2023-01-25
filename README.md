@@ -11,12 +11,18 @@ Created with:
 
 1. Main page - choosing a currency pair
 
-![img](assets/screenshots/pair_choice.png)
+<p align="center">
+<img src="assets/screenshots/pair_choice.png" alt="demo" width="40%"/>
+</p>
 
 2. Page for choosing currency
 
-![img](assets/screenshots/currency_choice.png)
+<p align="center">
+<img src="assets/screenshots/currency_choice.png" alt="demo" width="40%"/>
+</p>
 
 3. Page for viewing the exchange rate with an update of information every 25 seconds
 
-![img](assets/screenshots/currency_rate.png)
+<p align="center">
+<img src="assets/screenshots/currency_rate.png" alt="demo" width="40%"/>
+</p>
